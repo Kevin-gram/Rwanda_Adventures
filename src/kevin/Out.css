@@ -1,0 +1,31 @@
+/* Reset default padding and margin */
+/* Background container */
+.back {
+    position: relative;
+    margin-top: 50px; /* You may adjust this as needed */
+    background-image: url('../images/lake-375609_1280.jpg');
+    background-size: cover;
+    object-fit: cover;
+    display: block;
+    max-height: 50vh; /* Limit height to 50% of viewport height */
+    height: 20vh; /* Added to explicitly set the height */
+}
+
+/* Overlay */
+.back::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Adjust height for medium screens */
+@media (min-width: 768px) {
+    .back {
+        min-height: 100vh; /* Adjusted height for medium screens */
+        height: 100vh; /* Ensure height covers entire viewport height */
+    }
+}

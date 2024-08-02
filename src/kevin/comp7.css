@@ -1,0 +1,7 @@
+@media only screen and (min-width: 1024px)  and (-webkit-min-device-pixel-ratio: 1) {
+    img {
+      width: 400vh;
+        height: 400vh;
+    }
+  }
+  

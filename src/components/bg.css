@@ -1,0 +1,36 @@
+/* Reset default padding and margin */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Background container */
+.background {
+    position: relative;
+    margin-top: 50px; /* You may adjust this as needed */
+    background-image: url('../images/ankole-4636125_1280.jpg');
+    background-size: cover;
+    object-fit: cover;
+    margin: 10px 0; /* This line may be removed as it's overridden below */
+    display: block;
+    min-height: 100vh;
+}
+
+/* Overlay */
+.background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+/* Adjust height for medium screens */
+@media (min-width: 768px) {
+    .background {
+        min-height: 100vh; /* Adjusted height for medium screens */
+    }
+}
